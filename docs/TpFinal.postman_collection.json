@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "4949b66a-637d-4b79-91c7-e267920009d0",
+		"name": "TpFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20685982"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "localhost:8080/listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/buscar/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/buscar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"buscar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellido\": \"cantero\", \r\n    \"contraseña\": \"1234\", \r\n    \"email\": \"melc@mail.com\", \r\n    \"nombre\": \"Melisa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/guardar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/modificar/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellido\": \"canteros\", \r\n    \"contraseña\": \"1234\", \r\n    \"email\": \"melc@mail.com\", \r\n    \"nombre\": \"Melisa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/modificar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"modificar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/eliminar/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/eliminargenero/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"eliminargenero",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genero",
+			"item": [
+				{
+					"name": "localhost:8080/listargenero",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"[\r",
+									"    {\r",
+									"        \"id\": 2,\r",
+									"        \"tipoGenero\": \"f\"\r",
+									"    }\r",
+									"]"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/listargenero",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listargenero"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/modificargenero/3",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"[\r",
+									"    {\r",
+									"        \"id\": 1,\r",
+									"        \"tipoGenero\": \"f\"\r",
+									"    }\r",
+									"]"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoGenero\": \"f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/modificargenero/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"modificargenero",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/eliminargenero/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/eliminargenero/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"eliminargenero",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
